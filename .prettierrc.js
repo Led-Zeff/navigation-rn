@@ -6,4 +6,5 @@ module.exports = {
   arrowParens: 'avoid',
   embeddedLanguageFormatting: 'off',
   arrowParens: 'avoid',
+  endOfLine: 'crlf'
 };

@@ -1,5 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+export const palette = {
+  primary: '#102027',
+  accent: '#29434e',
+  secondary: '#34515e',
+  foreColor: '#fafafa',
+  foreColorAccent: '#eeffff',
+  foreColorSecondary: '#bbdefb',
+};
+
 const styles = StyleSheet.create({
   globalMargin: {
     marginHorizontal: 20,
@@ -21,6 +30,10 @@ const styles = StyleSheet.create({
   },
   menuText: {
     fontSize: 20,
+  },
+  text: {
+    color: palette.foreColor,
+    fontSize: 14,
   },
 });
 

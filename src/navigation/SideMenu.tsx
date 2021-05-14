@@ -13,8 +13,9 @@ import {
   View,
 } from 'react-native';
 import { SettingsScreen } from '../screens/SettingsScreen';
-import { StackNavigator } from './StackNavigator';
 import styles from '../theme/appTheme';
+import { TabsNavigation } from './TabsNavigation';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -26,7 +27,7 @@ export const SideMenu = () => {
       drawerType={width >= 720 ? 'permanent' : 'front'}
       drawerStyle={{ width: 200 }}
       drawerContent={menu}>
-      <Drawer.Screen name="Home" component={StackNavigator} />
+      <Drawer.Screen name="Home" component={TabsNavigation} />
       <Drawer.Screen name="Settings" component={SettingsScreen} />
     </Drawer.Navigator>
   );
@@ -46,7 +47,10 @@ const menu = ({
     </View>
 
     <View style={styles.menuContainer}>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+      <TouchableOpacity
+        style={{ flexDirection: 'row', alignItems: 'center' }}
+        onPress={() => navigation.navigate('Home')}>
+        <Icon name="apps-outline" color="black" size={18} />
         <Text style={styles.menuText}>Home</Text>
       </TouchableOpacity>
 
